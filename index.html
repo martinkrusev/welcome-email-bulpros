@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <style>
+        @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        /*RESET STYLE*/
+        .ExternalClass {width: 100%;}
+        table {border-collapse:separate;}
+        a, a:link, a:visited {text-decoration: none; color: #ffffff;} 
+        a:hover {text-decoration: none;}
+        h2,h2 a,h2 a:visited,h3,h3 a,h3 a:visited,h4,h5,h6,.t_cht {color:#000;}
+        .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%;}
+        .ExternalClass {width: 100%;}
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Lato', sans-serif;
+            max-width: 800px;
+        }
+        img{
+            border:0 none;
+            height:auto;
+            line-height:100%;
+            outline:none;
+            text-decoration:none;
+        }
+        h1, h2, h3{
+            margin:0;
+        }
+        p{
+            margin:0;
+        }
+        a img{
+            border:0 none;
+        }
+
+        .imageFix{
+            display:block;
+        }
+
+        table, td{
+            border-collapse:collapse;
+        }
+
+        #bodyTable{
+            height:100% !important;
+            margin:0;
+            padding:0;
+            width:100% !important;
+        }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /*END RESET*/
+        body{
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+        }
+        p {
+            font-size: 1em;
+            line-height: 20px;
+            color: #072e59;
+        }
+        h1{
+            font-size: 1.5em;
+            line-height: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #072e59;
+            margin: 30px 0 30px 0;
+        }
+        h2{
+            font-size: 1.2em;
+            line-height: 24px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #072e59;
+            margin-top: 25px;
+        }
+        .social-section{
+            background-color: #172b54;
+            height: 40px;
+            padding: 0 50px;
+            line-height: 40px;
+        }
+        .social-section a{
+            text-decoration: none;
+            color: #ffffff;
+            padding: auto 0;
+        }
+        .social-section a img{
+            float: right;
+            padding: 5px;
+        }
+        .wrapper{
+            padding: 0 25px;
+        }
+        .section{
+            margin-top: 20px;
+        }
+        .header-logo{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .header-logo img{
+            margin-top: 20px;
+        }
+        .header-logo h3{
+            margin-top: 13px;
+        }
+        .hero{
+            background-image: url("https://imgur.com/VXjZzad.png");
+            min-height: 240px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #ffffff;
+        }
+        .hero-wrapper{
+            padding: 5% 25px;
+            width: 40%;
+        }
+        .hero-wrapper h1{
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+        .white-title{
+            color: #ffffff;
+            text-align: left;
+        }
+        .white-text{
+            color: #ffffff;
+            line-height: 22px;
+        }
+        .text-box-left{
+            background-color: #e6e7e8;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .text-box-right{
+            background-color: #ffffff;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .image-holder-right{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+            width: 45%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 20px;
+        }
+        .image-holder-left{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80%;
+            width: 45%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 20px;
+        }        
+        .text-box-left p{
+            margin-top: 0;
+            width: 47%;
+            margin-bottom: 30px;
+        }
+        .text-box-right p{
+            float: right;
+            margin-top: 0;
+            width: 47%;
+            margin-bottom: 30px;
+        }
+        .text-holder-left{
+            float:left;
+        }
+        .text-holder-right{
+            float: right;
+        }
+        /* INSTERT IMAGES FOR USEFULL LINKS SECTION HERE */
+        .new-starters-kit-section{
+            background-image: url("https://imgur.com/nACbTXI.png");
+        }
+        .intranet-section{
+            background-image: url("https://imgur.com/f1f81Ot.png");
+        }
+        .policies-and-procedures-section{
+            background-image: url("https://imgur.com/tHkh1LF.png");
+        }
+        .intranet-tools-section{
+            background-image: url("https://imgur.com/KQWHTjs.png");
+        }
+        .skill-matrix-section{
+            background-image: url("https://imgur.com/74kOzZi.png");
+        }
+        /* END INSERT */
+        .button{
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            height: 25px;
+            line-height: 25px;
+            padding: 5px 20px;
+            background-color: #072e59;
+            color: #ffffff;
+            min-width: 200px;
+        }
+        .useful-mails{
+            text-align: center;
+            width: 100%;
+        }
+        .useful-mails tr td{
+            width: 33%;
+            padding: 0 20px;
+        }
+        .useful-mails tr td p{
+            margin: 0 0 10px;
+        }
+        .useful-mails tr td a{
+            text-decoration: none;
+            color: #2875ba;
+            line-height: 80px;
+        }
+        .raf-section{
+            padding: 0 40px;
+            background-image: url("https://imgur.com/uhc7JOi.png");
+            min-height: 400px;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .raf-title{
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 2.2em;
+            line-height: 1.2em;
+            text-align: left;
+            width: 30%;
+            color: #0076ce;
+        }
+        .raf-text{
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2em;
+            line-height: 1.2em;
+            text-align: left;
+            width: 30%;
+            color: #002854;
+        }
+        .access{
+            width: 100%;
+        }
+        .icon-holder{
+            width: 15%;
+            text-align: center;
+        }
+        .icon-holder img{
+            margin: 15px 0;
+        }
+        .text-holder a,span{
+            text-decoration: none;
+            color: #2875ba;
+            font-size: 1.1em;
+        }
+        .gray{
+            background-color: #e6e7e8;
+        }
+        .societies{
+            width: 100%;
+        }
+        .societies .text-holder{
+            width: 40%;
+        }
+        .societies a{
+            font-size: 1em;
+        }
+        .societies p{
+            margin: 0;
+        }
+        .footer{
+            text-align: center;
+        }
+        .more-info{
+            background-color: #e6e7e8;
+            padding: 25px;
+        }
+        .more-info a{
+            color: #002854;
+        }
+        .address{
+            padding: 20px;
+        }
+        .good-luck{
+            background-color: #072e59;
+            padding: 35px;
+            color: #ffffff;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <section class="social-section">
+        <a href="http://bulpros.com">bulpros.com</a>
+        <a href="http://linkedin.com" target="_blank"><img src="https://imgur.com/Gq0Lxa9.png" alt="linkedin" height="30" width="30"></a>
+        <a href="http://facebook.com" target="_blank"><img src="https://imgur.com/1kSmjqI.png" alt="facebook" height="30" width="30"></a>
+    </section>
+
+    <div class="wrapper">
+        <div class="header-logo">
+            <img src="https://imgur.com/lqBhirR.png" alt="bulpros-logo" srcset="" height="25">
+            <h3 class="title">Hello and welcome to our company!</h3>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="hero">
+            <div class="hero-wrapper">
+                <h1 class="white-title">WELCOME</h1>
+                <p class="white-text">We are happy to have you in our team. For your easier integration and collaboration with colleagues, you can find below some useful company information:</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper section">
+        <div class="text-box-left">
+            <div class="image-holder-right new-starters-kit-section">
+                    <!-- <img src="/img/new-starters-kit-section.png" alt="new-starter" srcset=""> -->
+            </div>
+            <div class="text-holder-left">
+                <p>To begin with, we have prepared a "New starters kit" of documents, consisting of User Guide for Intranet, Manuals for submitting Absences, Expenses &amp; Timesheets, summary of company Travel policy, and other.
+                   <br>
+                   <br>
+                   <a href="/" class="button">New Starters kit</a></p>
+            </div>
+        </div>
+        <div class="text-box-right">
+            <div class="image-holder-left intranet-section">
+                    <!-- <img src="/img/intranet-section.png" alt="new-starter" srcset=""> -->
+            </div>
+            <div class="text-holder-right">
+                <p>To find out more about the company history &amp; management &amp; life; to stay tuned with all upcoming activities &amp; news &amp; events; to find colleagues, please visit our Intranet.
+                <br>
+                <br>
+                <a href="/" class="button">Intranet</a>
+                </p>
+            </div>
+        </div>
+        <div class="text-box-left">
+                <div class="image-holder-right policies-and-procedures-section">
+                        <!-- <img src="/img/policies-and-procedures-section.png" alt="new-starter" srcset=""> -->
+                </div>
+                <div class="text-holder-left">
+                    <p>To get familiar with all company policies and procedures, please follow the link.
+                        <br>
+                        <br>
+                        <a href="/" class="button">policies and procedures</a></p>
+                </div>
+            </div>
+        <div class="text-box-right">
+            <div class="image-holder-left intranet-tools-section">
+                    <!-- <img src="/img/intranet-tools-section.png" alt="new-starter" srcset=""> -->
+            </div>
+            <div class="text-holder-right">
+                <p>Intranet Tools: (Feedback &amp; Timesheets &amp; Expenses &amp; Service Desk &amp; Appraisal &amp; Vacation Planning).
+                <br>
+                <br>
+                <a href="/" class="button">Intranet tools</a>
+                </p>
+            </div>
+        </div>
+        <div class="text-box-left">
+            <div class="image-holder-right skill-matrix-section">
+                    <!-- <img src="/img/skill-matrix-section.png" alt="new-starter" srcset=""> -->
+            </div>
+            <div class="text-holder-left">
+                <p>Skill Matrix: an internal tool for self-assessing skills and competencies possessed by employees (tips attached)
+                    <br>
+                    <br>
+                    <a href="/" class="button">Skill matrix</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper section">
+        <h1>Some useful e-mails</h1>
+        <table class="useful-mails">
+            <tr>
+                <td>
+                    <img src="https://imgur.com/aeHhZ6o.png" alt="payroll-icon" srcset="" height="55">
+                </td>
+                <td>
+                    <img src="https://imgur.com/0BZs0oJ.png" alt="soft-hr-icon" srcset="" height="55">
+                </td>
+                <td>
+                    <img src="https://imgur.com/XdELKWF.png" alt="feedback-icon" srcset="" height="55">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>payroll department</h2>
+                </td>
+                <td>
+                    <h2>soft hr</h2>
+                </td>
+                <td>
+                    <h2>feedback</h2>
+                </td>
+            </tr>
+            <tr>
+                <td><p>(salaries, paid &amp; unpaid &amp; sick leaves, health and safety)</p></td>
+                <td><p>(relationships, development &amp; etc.)</p></td>
+                <td><p>(recommendations, comments)</p></td>
+            </tr>
+            <tr class="last-td">
+                <td><a href="mailto:payroll@bulpros.com">payroll@bulpros.com</a></td>
+                <td><a href="mailto:hr@bulpros.com">hr@bulpros.com</a></td>
+                <td><a href="mailto:feedback@bulpros.com">feedback@bulpros.com</a></td>
+            </tr>
+            
+
+            <tr>
+                    <td>
+                        <img src="https://imgur.com/9IvOieq.png" alt="service-desk-icon.ico" srcset="" height="55">
+                    </td>
+                    <td>
+                        <img src="https://imgur.com/OjB7knZ.png" alt="service-desk-shop-icon.ico" srcset="" height="55">
+                    </td>
+                    <td>
+                        <img src="https://imgur.com/NCWjmJx.png" alt="payments.ico" srcset="" height="55">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>service desk</h2>
+                    </td>
+                    <td>
+                        <h2>service desk (shop)</h2>
+                    </td>
+                    <td>
+                        <h2>payments</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>(for addressing IT, technical &amp; facility issue, VPN access, other)</p></td>
+                    <td><p>For ordering additional technical equipment: please CC your Line Manager for Approval</p></td>
+                    <td><p>(to request bank payment of invoice. Please CC the Cost Centre owner in the e-mail for approval) </p></td>
+                </tr>
+                <tr>
+                    <td><a href="mailto:payroll@bulpros.com">payroll@bulpros.com</a></td>
+                    <td><a href="mailto:hr@bulpros.com">hr@bulpros.com</a></td>
+                    <td><a href="mailto:feedback@bulpros.com">feedback@bulpros.com</a></td>
+                </tr>
+        </table>
+    </div>
+    <div class="wrapper section raf-section">
+        <h1 class="raf-title">Rerfer &amp; Get Rewarded</h1>
+        <p class="raf-text">Refer somebody you know suitable for an open position in the 
+                company and get a bonus for that (if applicable).</p>
+    </div>
+    <div class="wrapper section">
+        <table class="access">
+            <tr class="gray">
+                <td class="icon-holder">
+                    <img src="https://imgur.com/4N6fQi4.png" alt="Skype-for-Business-icon.png" srcset="" width="40">
+                </td>
+                <td class="text-holder"><p>Skype for Business- <br>
+                        internal business communication tool (all company contacts available).</p></td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/nEgJc5I.png" alt="email-icon.png" srcset=""  width="40">
+                </td>
+                <td class="text-holder"><p>Web mail access: <a href="http://https://ex1.bulpros.com/owa/" target="_blank">https://ex1.bulpros.com/owa/</a></p></td>
+            </tr>
+            <tr class="gray">
+                <td class="icon-holder">
+                    <img src="https://imgur.com/mUBj0VD.png" alt="printer-icon.png" srcset=""  width="40">
+                </td>
+                <td class="text-holder"><p>Printers list: <span class="link">\\files</span></p></td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://i.imgur.com/bn7yDVu.png" alt="user-icon.png" srcset=""  width="40">
+                </td>
+                <td class="text-holder"><p>User name &amp; password (e-mail, pc, Intranet) <br>
+                        User: name.surname@bulpros.com <br>
+                        First password: provided by IT <br>
+                        Change of password: Ctrl+Alt+Del - change a password (requirements: 8 symbols, uppercase, lowercase, number, nonalphanumeric character (!@+_-%$, etc.)
+                        </p></td>
+            </tr>
+            <tr class="gray">
+                    <td class="icon-holder">
+                        <img src="https://imgur.com/azHld7y.png" alt="pay-slip-icon.png" srcset=""  width="40">
+                    </td>
+                    <td class="text-holder"><p>Password for your Pay slip: Your Personal Identification Number</p></td>
+                </tr>
+        </table>
+    </div>
+    <div class="wrapper section">
+        <h1>Below you can find our Bulpros Societies. <br>
+            if you have interest to join them <br>
+            you can contact the captain society!
+        </h1>
+        <table class="societies">
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/b7fEq8O.png" alt="extreme" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Dobromir Nedelchev</p>
+                    <a href="mailto:Dobromir.Nedelchev@bulpros.com">Dobromir.Nedelchev@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/73UjHMi.png" alt="gaming" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Borislav Jivkov, <br>Alexander Stoilov</p>
+                    <a href="mailto:gaming@bulpros.com">gaming@bulpros.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/dSEKnzi.png" alt="football" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Auas Allatif</p>
+                    <a href="mailto:Auas.Allatif@bulpros.com">Auas.Allatif@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/0dMA1nK.png" alt="basketball-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Dobromir Nedelchev</p>
+                    <a href="mailto:Dobromir.Nedelchev@bulpros.com">Dobromir.Nedelchev@bulpros.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/8DEX2fD.png" alt="it-team-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Krasimir Atanasov</p>
+                    <a href="mailto:Krasimir.Atanasov@bulpros.com">Krasimir.Atanasov@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/yyIMl7E.png" alt="photography-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Searching for captian</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/WoUprh6.png" alt="good-taste-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Denitza Kuncheva</p>
+                    <a href="mailto:Denitza.Kuncheva@bulpros.com">Denitza.Kuncheva@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/W75nVIE.png" alt="my-cause-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Vesela Kavroshilova</p>
+                    <a href="mailto:Vesela.Kavroshilova@bulpros.com">Vesela.Kavroshilova@bulpros.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/Wv47Zi5.png" alt="tennis-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Diyana Petrova <br>Ilian Kostov</p>
+                    <a href="mailto:Diyana.Petrova@bulpros.com">Diyana.Petrova@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/5PrLaGR.png" alt="geeks-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Searching for captian</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/shWMiTR.png" alt="idk-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Filip Tanchev</p>
+                    <a href="mailto:Filip.Tanchev@bulpros.com">Filip.Tanchev@bulpros.com</a>
+                </td>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/1sWBVPF.png" alt="cycling-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Nikolay Panov</p>
+                    <a href="mailto:Nikolay.Panov@bulpros.com">Nikolay.Panov@bulpros.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="icon-holder">
+                    <img src="https://imgur.com/qFETs74.png" alt="drinks-icon" srcset="">
+                </td>
+                <td class="text-holder">
+                    <p>Stiliyan Hadjiyski</p>
+                    <a href="mailto:Stiliyan.Hadjiyski@bulpros.com">Stiliyan.Hadjiyski@bulpros.com</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="wrapper section">
+        <div class="footer">
+            <p class="more-info">For any additional information or further questions, please refer to your Line manager or the Resource Manager. <br> If the e-mail doesn't display properly, please click <a href="/web-preview/index.html" target="_blank" rel="noopener noreferrer">here</a>.
+            </p>
+            <p class="address">
+                BULPROS Company Details <br>
+                Bulpros Consulting AD <br>
+                VAT number: BG201203809 <br>
+                Ivaylo Slavov <br>
+                Address: Bulgaria, 1766 Sofia, Mladost, Business Park Sofia, bld.15, fl.5
+            </p>
+            <h3 class="good-luck">We wish you good luck!</h3>
+        </div>
+    </div>
+</body>
+</html>
