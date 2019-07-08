@@ -6,6 +6,19 @@ body {
   line-height: 18px;
 }
 
+@media screen and (max-device-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media screen and (max-device-width: 425px) {
+  body {
+    font-size: 16pt;
+    line-height: 22pt;
+  }
+}
+
 a, a:visited, a:-webkit-any-link, a:active {
   text-decoration: none;
   cursor: pointer;
@@ -94,6 +107,18 @@ section {
   background-size: cover;
 }
 
+@media screen and (max-device-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+}
+
+@media screen and (max-device-width: 425px) {
+  .hero {
+    height: 100%;
+  }
+}
+
 .hero h1 {
   font-size: 3em;
   color: #ffffff;
@@ -104,7 +129,13 @@ section {
   font-size: 1em;
   color: #ffffff;
   width: 30%;
-  line-height: 1rem;
+  line-height: 1.5em;
+}
+
+@media screen and (max-device-width: 425px) {
+  .hero p {
+    width: 40%;
+  }
 }
 
 .grid-container {
@@ -113,6 +144,7 @@ section {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(100px, auto);
+  grid-row-gap: 10px;
 }
 
 .grid-container .nested {
@@ -122,15 +154,35 @@ section {
       grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-device-width: 425px) {
+  .grid-container .nested {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
 .grid-container .nested p {
   font-size: 1em;
-  line-height: 1rem;
+  line-height: 1em;
   margin: 20px;
+}
+
+@media screen and (max-device-width: 425px) {
+  .grid-container .nested p {
+    line-height: 1.5em;
+  }
 }
 
 .grid-container .nested img {
   margin: 20px;
   width: 100%;
+}
+
+@media screen and (max-device-width: 768px) {
+  .grid-container .nested img {
+    width: 90%;
+  }
 }
 
 .grid-container .nested .button {
@@ -173,6 +225,10 @@ section {
   text-align: center;
 }
 
+.useful-emails h1 {
+  margin-bottom: 20px;
+}
+
 .useful-emails .useful-info-grid {
   display: -ms-grid;
   display: grid;
@@ -181,12 +237,26 @@ section {
   grid-gap: 20px;
 }
 
+@media screen and (max-device-width: 425px) {
+  .useful-emails .useful-info-grid {
+    display: block;
+    text-align: center;
+  }
+}
+
 .useful-emails .useful-info-grid .useful-info-grid-section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 20px;
+}
+
+@media screen and (max-device-width: 425px) {
+  .useful-emails .useful-info-grid .useful-info-grid-section {
+    margin: 30px 0;
+    grid-row-gap: 10px;
+  }
 }
 
 .useful-emails .useful-info-grid .useful-info-grid-section h2 {
@@ -214,6 +284,7 @@ section {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 20px;
 }
 
 .raf-section .raf-title {
@@ -227,6 +298,12 @@ section {
   margin-bottom: 30px;
 }
 
+@media screen and (max-device-width: 425px) {
+  .raf-section .raf-title {
+    font-size: 2em;
+  }
+}
+
 .raf-section .raf-text {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
@@ -234,6 +311,12 @@ section {
   text-align: left;
   width: 30%;
   color: #002854;
+}
+
+@media screen and (max-device-width: 425px) {
+  .raf-section .raf-text {
+    font-size: 1em;
+  }
 }
 
 .useful-info {
@@ -254,6 +337,13 @@ section {
   background-color: #e8e7e6;
 }
 
+@media screen and (max-device-width: 425px) {
+  .societies {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .societies h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -265,6 +355,13 @@ section {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  padding: 20px;
+}
+
+@media screen and (max-device-width: 425px) {
+  .societies .societies-grid {
+    display: block;
+  }
 }
 
 .societies .societies-grid .societies-grid-section {
@@ -275,12 +372,26 @@ section {
   grid-column-gap: 20px;
 }
 
+@media screen and (max-device-width: 425px) {
+  .societies .societies-grid .societies-grid-section {
+    margin-bottom: 20px;
+    -ms-grid-columns: 35% 65%;
+        grid-template-columns: 35% 65%;
+  }
+}
+
 .societies .societies-grid .societies-grid-section img {
   margin: 0 auto;
 }
 
 .societies .societies-grid .societies-grid-section p {
   text-transform: uppercase;
+}
+
+@media screen and (max-device-width: 425px) {
+  .societies .societies-grid .societies-grid-section p {
+    line-height: 1.5em;
+  }
 }
 
 footer {
