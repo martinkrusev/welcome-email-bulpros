@@ -229,22 +229,23 @@ section {
   margin-bottom: 20px;
 }
 
-.useful-emails .useful-info-grid {
+.useful-emails .useful-info-grid-1st-row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  margin: 40px 0;
 }
 
 @media screen and (max-device-width: 425px) {
-  .useful-emails .useful-info-grid {
+  .useful-emails .useful-info-grid-1st-row {
     display: block;
     text-align: center;
   }
 }
 
-.useful-emails .useful-info-grid .useful-info-grid-section {
+.useful-emails .useful-info-grid-1st-row .useful-info-grid-section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
@@ -253,28 +254,78 @@ section {
 }
 
 @media screen and (max-device-width: 425px) {
-  .useful-emails .useful-info-grid .useful-info-grid-section {
+  .useful-emails .useful-info-grid-1st-row .useful-info-grid-section {
     margin: 30px 0;
     grid-row-gap: 10px;
   }
 }
 
-.useful-emails .useful-info-grid .useful-info-grid-section h2 {
+.useful-emails .useful-info-grid-1st-row .useful-info-grid-section h2 {
   font-size: 1.5em;
   line-height: 2em;
   text-transform: uppercase;
   color: #172b54;
 }
 
-.useful-emails .useful-info-grid .useful-info-grid-section img {
+.useful-emails .useful-info-grid-1st-row .useful-info-grid-section img {
   margin: 0 auto;
 }
 
-.useful-emails .useful-info-grid .useful-info-grid-section p {
+.useful-emails .useful-info-grid-1st-row .useful-info-grid-section p {
   padding: 0 20px;
 }
 
-.useful-emails .useful-info-grid .useful-info-grid-section a {
+.useful-emails .useful-info-grid-1st-row .useful-info-grid-section a {
+  font-size: 1.2em;
+}
+
+.useful-emails .useful-info-grid-2nd-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+
+@media screen and (max-device-width: 425px) {
+  .useful-emails .useful-info-grid-2nd-row {
+    display: block;
+    text-align: center;
+  }
+}
+
+.useful-emails .useful-info-grid-2nd-row .useful-info-grid-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 20px;
+}
+
+@media screen and (max-device-width: 425px) {
+  .useful-emails .useful-info-grid-2nd-row .useful-info-grid-section {
+    margin: 30px 0;
+    grid-row-gap: 10px;
+  }
+}
+
+.useful-emails .useful-info-grid-2nd-row .useful-info-grid-section h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  text-transform: uppercase;
+  color: #172b54;
+}
+
+.useful-emails .useful-info-grid-2nd-row .useful-info-grid-section img {
+  margin: 0 auto;
+}
+
+.useful-emails .useful-info-grid-2nd-row .useful-info-grid-section p {
+  padding: 0 20px;
+}
+
+.useful-emails .useful-info-grid-2nd-row .useful-info-grid-section a {
   font-size: 1.2em;
 }
 
