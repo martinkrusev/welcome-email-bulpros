@@ -117,7 +117,7 @@ section{
         }
         & p{
             font-size: 1em;
-            line-height: 1em;
+            line-height: 1.5em;
             margin: 20px;
             @media screen and (max-device-width: $break-small){
                 line-height: 1.5em;
@@ -125,7 +125,7 @@ section{
         }
         & img{
             margin: 20px;
-            width: 100%;
+            width: 90%;
             @media screen and (max-device-width: $break-medium){
                 width: 90%;
             }
